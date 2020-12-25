@@ -23,26 +23,31 @@ class Solution:
 	def firstMissingPositive(self, nums: List[int]) -> int:
 		i = 0
 		n = len(nums)
-		while i < n:
-			print(" i :", i)
-			d = nums[i] - 1
+		for i in range(n):
+
 			#expect value for ideal list
             #if we have [1,2,0] we need a ideal list : [1,2,0]
             #so destination value nums[i]-1
-            #
-			# sanity check - duplicate check
-			# put num[i] to the correct place if nums[i] in the range [1, n]
-			print("	d : ", d)
-			try:
-				print("		check to swap, nums[i] :", nums[i], " - nums[d] :", nums[d] )
-			except Exception as e:
-				print("")
+        
+			while nums[i] != i+1:
+				print(" i :", i)
+				d = nums[i] - 1
+				# sanity check - duplicate check
+				# put num[i] to the correct place if nums[i] in the range [1, n]
+				print("	d : ", d)
+				
+				try:
+					print("		check to swap, nums[i] :", nums[i], " - nums[d] :", nums[d] )
+				except Exception as e:
+					print("")
 
-			if 0 <= d < n and nums[i] != nums[d]:
-				print("			start swap, nums[i] :", nums[i], " - nums[d] :", nums[d] )
-				nums[i], nums[d] = nums[d], nums[i]
-			else:
-				i += 1
+				if 0 <= d < n and nums[i] != nums[d]:
+					print("			start swap, nums[i] :", nums[i], " - nums[d] :", nums[d] )
+					nums[i], nums[d] = nums[d], nums[i]
+					print("			AFTER swap, nums :", nums)
+
+				else:
+					break
 
 		print("nums : ", nums)
 
@@ -64,8 +69,8 @@ class Solution:
 
 nums = [7,8,9,11,12]
 nums = [3,4,-1,1]
-nums = [1,2,3]
-nums = [1,2,0]
+# nums = [1,2,3]
+# nums = [1,2,0]
 res = Solution().firstMissingPositive(nums)
 print("res : ", res)
 
