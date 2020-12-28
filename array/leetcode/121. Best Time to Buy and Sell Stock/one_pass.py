@@ -1,9 +1,22 @@
 '''
+
+    [7,1,5,3,6,4]
+
+    sell-7 , buy-1, sell-5, buy-3, sell-6, buy-4
+
+    sel6 - buy1 = 5 max profit 
+
+    we can match everytime what is max profit ? 
+
     we can iterate prices .
         we can store min_price and max_profit variable
         min price first can be max int. 
         max_profit = 0
+
+
+    you can see screen shot.
 '''
+
 
 import sys
 class Solution(object):
