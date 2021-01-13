@@ -55,6 +55,8 @@ result = bfs(t1)
 print(result)
 
 '''
-Time complexity :  O(N) , where n is number of nodes. Each node getting added to the queue , pop from the q, and added to the result once.
-Space complexity: O(N)
+Time complexity :  O(N) , where n is number of nodes. 
+					Each node getting added to the queue , pop from the q, and added to the result once.
+Space complexity: O(N) , Queue to keep track of nodes we still need to visit the children of.
+						 Q contain all the element  at a single level
 '''

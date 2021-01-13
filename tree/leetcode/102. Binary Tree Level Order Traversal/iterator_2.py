@@ -1,7 +1,9 @@
 '''
 level traversal order is the other saying BFS (Breadth First Search)
 We scan through the tree level by level, following the order of height, from top to bottom.
-	We need apply a Queue strusture (FIFO). We can add whole Node to a queue. And after we can pull by one by node from queue and we can add the global result array.
+	We need apply a Queue strusture (FIFO). 
+	We can add whole Node to a queue. 
+		And after we can pull by one by node from queue and we can add the global result array.
 '''
 
 from collections import deque
