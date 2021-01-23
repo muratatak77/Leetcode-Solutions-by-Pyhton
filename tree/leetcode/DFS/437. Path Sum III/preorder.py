@@ -59,7 +59,7 @@ class Solution(object):
             preorder(node.left, curr_sum)
             preorder(node.right, curr_sum)
 
-            h[curr_sum] -= 1
+            # h[curr_sum] += 1
 
         h = defaultdict(int)
         count,k = 0, _sum

@@ -18,7 +18,7 @@ class Solution:
 
         while queue:
             level_length = len(queue)
-            temp_node,level_head_index = queue[0]
+            trivial_node,level_head_index = queue[0]
 
             # iterate through the current level
             for _ in range(level_length):

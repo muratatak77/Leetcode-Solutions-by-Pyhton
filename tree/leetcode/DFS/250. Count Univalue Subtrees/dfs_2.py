@@ -33,7 +33,6 @@ class Univalue():
 			#recursive case, internal node
 			#each node needs whether I am unival or not.
 			#if current level is unival we need to add global count increment
-			mydia = 0
 
 			if root.left:
 				isleftUni = dfs(root.left)

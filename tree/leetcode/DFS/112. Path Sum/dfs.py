@@ -14,10 +14,9 @@ def overall(root, sum):
 
 
 	def dfs(node, target):
-		print("node : ", node.val, " - target : ", target)
+
 		#base case : leaf workers
 		if not node.left and not node.right:
-			print("target : ", target)
 			if target == node.val:
 				flag[0] = True
 				return
@@ -33,13 +32,17 @@ def overall(root, sum):
 
 
 
-node = TreeNode(5)
-node.left = TreeNode(4)
-node.left.left = TreeNode(11)
-node.left.left.right = TreeNode(2)
-node.left.left.left = TreeNode(7)
-node.right = TreeNode(8)
+# node = TreeNode(5)
+# node.left = TreeNode(4)
+# node.left.left = TreeNode(11)
+# node.left.left.right = TreeNode(2)
+# node.left.left.left = TreeNode(7)
+# node.right = TreeNode(8)
 
-sum = 22
+node = TreeNode(1)
+node.left = TreeNode(2)
+
+
+sum = 1
 print(overall(node, sum))
 
