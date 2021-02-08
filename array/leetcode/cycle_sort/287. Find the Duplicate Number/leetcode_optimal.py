@@ -25,29 +25,18 @@ class Solution:
 		fast = 0
 		#find intersection
 		while True:
-			print("slow 0: ", slow)
-			print("fast 0: ", fast)
+
 			slow = nums[slow]
 			fast = nums[nums[fast]]
-			print("slow 1: ", slow)
-			print("fast 1: ", fast)
 			if slow == fast:
 				break
-			print("-----")
 
 		#find cycle trough same way
 		slow = 0
 		while slow != fast:
-			print("slow 0: ", slow)
-			print("fast 0: ", fast)
 			slow = nums[slow]
 			fast = nums[fast]
-			print("slow 1: ", slow)
-			print("fast 1: ", fast)
-			print(">> -----")
-
 		return slow
-
 
 
 nums = [1,3,4,2,2]
