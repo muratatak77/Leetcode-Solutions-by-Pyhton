@@ -1,0 +1,59 @@
+GIVEN A GRAPH, BUILD A NEW ONE WITH REVERSED EDGES
+Given A Graph, Build A New One With Reversed Edges
+Given A Graph, Build A New One With Reversed Edges
+
+
+
+Given a strongly connected directed graph, build a new graph with the same number of nodes but every edge reversed. This is also called transposing a graph.
+
+
+
+Example
+
+Input: Any node of this graph:
+
+
+
+Output: Any node of the new:
+
+
+
+
+
+Notes
+
+Input Parameters: Function has one argument pointing to a node of the given graph.
+
+
+
+Output: Return any node of the new graph.
+
+
+
+Constraints:
+
+1 <= number of nodes <= 315
+Value in any node will be a unique integer between 1 and number of nodes, inclusive.
+No multiple edges (connecting any pair of nodes in one direction) or self loops (edges connecting a node with itself) in the input graph.
+You are not allowed to modify the given graph. Return a newly built graph. 
+
+
+Custom Input
+
+Input Format: The first line of input contains two space separated integers n and m, denoting number of nodes and number of edges in the input graph, respectively. Next m lines contain two space separated integers each: fromNode and toNode, denoting that there is an edge from fromNode to toNode in G.
+
+For example, if n = 3, m = 3 and edges = [(1 -> 2), (2 -> 3), (3 -> 1)], then input would be:
+
+3 3
+
+1 2
+
+2 3
+
+3 1
+
+
+
+Output Format: There will be one line of output, containing a string "Wrong Answer!" OR "Correct Answer!", depending on the evaluation of your solution’s output. For input n = 3, m = 3 and edges = [(1 -> 2), (2 -> 3), (3 -> 1)], if your solution is correct, output will be:
+
+Correct Answer!

@@ -1,0 +1,81 @@
+#we need an input class for entries
+class input
+    input: Scanner, print: Print
+    def 
+end
+
+#we can apply an Print class to print stream 
+class Print
+    output: PrintStream
+end
+
+
+class Game
+    board: Board
+    player1: Player
+    player2: Player
+    currentPlayer: Player
+    winner: Player
+
+    #control is the turn 
+    def takeTurn(): void
+    #check for won game
+    def changeCurrentPlayer(): void
+    def isGameOver(): boolean
+    def isGameWonBy(Player player): boolean
+    #checks for tied game
+    def isGameTied(): boolen
+
+end
+
+
+class Player
+    def getMarker()
+    def getMove()
+    def title()
+end
+
+class ComputerPlayer()
+    include Player
+
+    random: integer
+    marker: String
+
+    def getMarker()
+    def getMovie()
+    def title()
+    def selectRamdomAvailableSteps()
+end
+
+
+
+class HumanPlayer()
+    include Player
+
+    input: Input
+    marker: String
+
+    def getMarker()
+    def getMovie()
+    def title()
+end
+
+#Manages the board
+#Split boards info Winning Possibilities
+class Board()
+    numberOfRows: integer
+    totalSpaces: integer
+    offset: integer
+    spaces: List String
+
+    def placeMarker() : void
+    def isSpaceAvailable() : boolean
+    def assignValuesToSpaces(): void
+    def getRows() : List[][]
+    def getColumns(): List[][]
+    def getLeftDioganal(): List[][]
+    def getRightDioganal(): List[][]
+
+end
+
+
