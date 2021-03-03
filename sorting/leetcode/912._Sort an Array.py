@@ -13,14 +13,15 @@ class Solution(object):
 		print("count  : " , count)
 
 		for i in range(0, n): 
-				index = (arr[i]//exp1) 
+				index = (arr[i]//exp1)
 				print("index : ", index)
 				count[ (index)%10 ] += 1
 				print("count : ", count)
-
+		print("======================")
 		for i in range(1,10): 
 				count[i] += count[i-1] 
 		print("count 2 : ", count)
+		print("======================")
 
 		# Build the output array 
 		i = n-1

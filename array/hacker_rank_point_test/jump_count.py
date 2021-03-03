@@ -62,9 +62,9 @@ def get_jump_count(number_of_str):
 
 	return jump_count
 
-# number_of_str = "3,1,0,2"
-number_of_str = "1,2,0"
-number_of_str = "1,2,6,9,2,3,5"
+number_of_str = "3,1,0,2"
+# number_of_str = "1,2,0"
+# number_of_str = "1,2,6,9,2,3,5"
 res = get_jump_count(number_of_str)
 print("res : " , res)
 

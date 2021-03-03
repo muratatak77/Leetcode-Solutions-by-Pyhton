@@ -1,14 +1,20 @@
 def divide(arr):
+    print("len arr : ", arr)
     if len(arr) > 1:
         mid = len(arr) // 2
+        print("mid : ", mid)
         left = arr[:mid]
         right = arr[mid:]
+        print("left: ", left)
+        print("right: ", right)
         divide(left)
         divide(right)
+
         combine(left, right, arr)
+        print("===========")
 
 def combine(left, right, arr):
-
+    print("Start combine left : ", left , " - right : ", right)
     #we need i and j for halves (left, right)
     i=0
     j=0
@@ -22,6 +28,7 @@ def combine(left, right, arr):
             arr[k] = right[j]
             j += 1
         k+=1
+    print(" >>>>>> arr after first while : ", arr)
 
     while i < len(left):
         arr[k] = left[i]

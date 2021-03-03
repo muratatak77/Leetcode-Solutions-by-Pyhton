@@ -25,12 +25,15 @@ class Solution(object):
 
 		for i in range(2, len(dp)):
 			one_digit = int(s[i-1:i])
+			print("	one_digit : ", one_digit)
 			two_digits = int(s[i-2:i])
+			print("	two_digits : ", two_digits)
 
 			if one_digit >= 1:
 				dp[i] += dp[i-1]
 			if two_digits >= 10 and two_digits <= 26:
 				dp[i] += dp[i-2]
+			print("		DP : ", dp)
 
 		print("DP : ", dp)
 
@@ -38,10 +41,10 @@ class Solution(object):
 
 
 s = "226"
-s= "1020"
-s= "2223"
-s = "0"
-s = "01"
+# s= "1020"
+# s= "2223"
+# s = "0"
+# s = "01"
 res = Solution().numDecodings(s)
 print("res :", res)
 

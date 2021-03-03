@@ -9,17 +9,19 @@
 
 from typing import List
 class Solution:
-    def wiggleSort(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        for i in range(len(nums)-1):
-        	if (i%2 == 0 and nums[i]>nums[i+1]) or (i%2 == 1 and nums[i]< nums[i+1]):
-        		nums[i], nums[i+1] = nums[i+1], nums[i]
-        return nums
-        	
+	def wiggleSort(self, nums: List[int]) -> None:
+		"""
+		Do not return anything, modify nums in-place instead.
+		"""
+		for i in range(len(nums)-1):
+			if (i%2 == 0 and nums[i]>nums[i+1]) or (i%2 == 1 and nums[i]< nums[i+1]):
+				nums[i], nums[i+1] = nums[i+1], nums[i]
+				print("nums : ", nums)
+		return nums
+			
 
 nums = [3,5,2,1,6,4]
+nums = [1,5,1,1,6,4]
 res = Solution().wiggleSort(nums)
 print("res  :", res)
 

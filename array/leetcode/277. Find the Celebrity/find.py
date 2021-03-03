@@ -27,7 +27,7 @@ Solution :
 	    	if knows(celebrity_candidate, i):
 	        	celebrity_candidate = i
 
-		We can find which person (0,1,2) would be celebri\ty candidate person
+		We can find which person (0,1,2) would be celebrity candidate person
 
 	second : we need to make verification already celebrity candidate found item from first step
 
@@ -54,8 +54,11 @@ class Solution:
 		celebrity_cand = 0
 
 		for i in range(1,n):
+			print(" i : ", i, "- celebrity_cand: ", celebrity_cand)
 			if self.knows(celebrity_cand, i):
 				celebrity_cand = i
+
+		print("		celebrity_cand : " , celebrity_cand)
 
 		#verification
 		for i in range(n):
@@ -67,7 +70,7 @@ class Solution:
 
 n = 3
 graph = [[1,1,0],[0,1,0],[1,1,1]]
-graph = [[1,0,1],[1,1,0],[0,1,1]]
+# graph = [[1,0,1],[1,1,0],[0,1,1]]
 
 res = Solution(graph).findCelebrity(n)
 print("res : ", res)
