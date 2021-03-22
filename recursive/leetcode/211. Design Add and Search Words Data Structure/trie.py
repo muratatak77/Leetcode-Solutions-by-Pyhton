@@ -11,19 +11,27 @@ class WordDictionary:
                 node[ch] = {}
             node = node[ch]
         node['$'] = True
+        
+        print("Node : ", self.trie)
+
+
 
     def search(self, word):
         """
         Returns if the word is in the data structure. A word could contain the dot character '.' to represent any letter.
         """
         def search_in_node(word, node):
+            print(">>>>>>>>>>>>>> Initial : word : ", word, " - node : ", node)
             for i, ch in enumerate(word):
-                print("iterator ch : ", ch)
+                print("iterator ch : ", ch, " - i :", i)
                 if not ch in node:
                     # if the current character is '.'
                     # check all possible nodes at this level
                     if ch == '.':
+                        print("        ch is . ")
                         for x in node:
+                            print(" node ")
+                            print(" x  in node : ", x)
                             if x != '$' and search_in_node(word[i + 1:], node[x]):
                                 return True
                     # if no nodes lead to answer
@@ -33,7 +41,8 @@ class WordDictionary:
                 # go down to the next level in trie
                 else:
                     node = node[ch]
-            return '$' in node
+                    print("         if ch in node :", node)
+            return '$' in nod
             
         return search_in_node(word, self.trie)
 

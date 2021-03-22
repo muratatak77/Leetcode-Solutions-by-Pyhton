@@ -64,10 +64,11 @@ class Solution(object):
 		print("---------------------")
 
 		print("arr finished : ", arr)
+
 				
 		return len([num for num in arr if num == 0])
 
 
-n = 64
+n = 10
 res = Solution().countPrimes(n)
 print("res : ", res)

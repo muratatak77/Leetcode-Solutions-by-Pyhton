@@ -27,7 +27,7 @@ def findPrimeNumbers(n):
 				primes.append(2)
 				continue
 
-			for i in range(2,num):
+			for i in range(2,num):	
 				if num % i == 0:
 					break
 			else:
@@ -35,7 +35,7 @@ def findPrimeNumbers(n):
 
 	return primes
 
-n = 50
+n = 13
 res = findPrimeNumbers(n)
 print("res : ", res)
 
