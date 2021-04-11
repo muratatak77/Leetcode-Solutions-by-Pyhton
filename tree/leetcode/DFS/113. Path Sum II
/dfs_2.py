@@ -27,6 +27,7 @@ def pathSum(root, sum):
 		if root.right:
 			dfs(root.right, target - root.val, slate)
 		slate.pop()
+		print("slate : ", slate)
 
 
 	dfs(root, sum, [])

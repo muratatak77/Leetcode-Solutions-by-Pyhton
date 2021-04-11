@@ -48,7 +48,7 @@ class Solution:
 
 
 s = "abcabcbb"
-s = "abcdeafbdgcbb"
+# s = "abcdeafbdgcbb"
 res = Solution().lengthOfLongestSubstring(s)
 print("res: ", res)
 

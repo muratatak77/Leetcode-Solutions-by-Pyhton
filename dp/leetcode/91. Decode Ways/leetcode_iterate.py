@@ -1,3 +1,7 @@
+'''
+	
+'''
+
 class Solution(object):
 	def numDecodings(self, s):
 		"""
@@ -45,5 +49,6 @@ class Solution(object):
 s = "226"
 s= "1020"
 s= "2223"
+s= "2326"
 res = Solution().numDecodings(s)
 print("res :", res)

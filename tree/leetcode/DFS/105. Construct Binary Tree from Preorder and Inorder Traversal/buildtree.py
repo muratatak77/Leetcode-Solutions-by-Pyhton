@@ -12,7 +12,8 @@ def buildTree(preorder, inorder):
 
 	for i in range(len(inorder)):
 		hmap[inorder[i]] = i #key is array element , value is index
-
+		
+	print("hmap : ", hmap)
 
 	def helper(P, startP, endP, I, startI, endI):
 		#base case

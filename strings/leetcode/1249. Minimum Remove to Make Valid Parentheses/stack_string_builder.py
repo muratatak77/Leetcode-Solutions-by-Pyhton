@@ -42,28 +42,39 @@ class Solution:
 		#step 1
 		#add or pop the stack if we have unsitable char index add to the set 
 		for i,char in enumerate(s):
+			print("char : ", char)
 			if char not in "()":
 				continue
 
 			if char == "(":
 				stack.append(i)
+				print("		stack 1 : ", stack)
 
 			elif not stack:
 				set_remove_idx.add(i)
+				print("		added set_remove_idx : ", set_remove_idx)
 
 			else:
 				stack.pop()
 
 		print("stack : ", stack)
+		print("set_remove_idx : ", set_remove_idx)
 
 		#step2 
 		#we will empty stack if still we have index items. Means this items is not appropriate for rules 
 		while stack:
 			set_remove_idx.add(stack.pop())
+			print("			set_remove_idx add stack pop :  ", stack)
+
+		print("set_remove_idx 2 : ", set_remove_idx)
+
 
 		#step3
 		#we will check to generate new string
 		new_string = []
+		if len(s) == len(set_remove_idx):
+			return  ""
+
 		for i,c in enumerate(s):
 			if i not in set_remove_idx:
 				new_string.append(c)
@@ -74,6 +85,7 @@ class Solution:
 
 s = "lee(t(c)o)de)"
 s = "))(("
+s = "a)b(c)d"
 res = Solution().minRemoveToMakeValid(s)
 print("res : ", res)
 

@@ -13,6 +13,7 @@
 
 	like = 
 	nums = [1,2,3,4]
+	
 	let's think we won't count 2  so means nums[1] is missing
 	left arr will be finally : 
 		initial :

@@ -20,6 +20,7 @@ class Solution:
             if merged: 
                 print("merged[-1] : ", merged[-1])
                 print("merged[-1][1] : ",merged[-1][1])
+                print("interval[0] : ",interval[0])
 
             if not merged or merged[-1][1] < interval[0]:
 
@@ -29,14 +30,14 @@ class Solution:
             # otherwise, there is overlap, so we merge the current and previous
             # intervals.
                 merged[-1][1] = max(merged[-1][1], interval[1])
-                print("merged : ", merged)
+                print("max merged : ", merged)
             print("========================")
 
 
         return merged
 
 intervals = [[1,3],[2,6],[8,10],[15,18]]
-intervals = [[1,9],[2,5],[19,20],[10,11],[10,13],[12,20],[0,3],[0,1],[0,2]]
+intervals = [[1,9],[2,5],[19,20],[10,11],[12,20],[0,3],[0,1],[0,2]]
 
 
 res = Solution().merge(intervals)

@@ -24,6 +24,7 @@ class Solution:
         #always large number would occupy a broader range on the line compared to a small number.
         #For exp : for th enumber 9 shuould be eaxtly nine times as the range for the number 1
         target = self.total_sum * random.random()
+        print("target : ", target)
 
         # we can apply BS to find in array.
         low, high = 0, len(self.prefix_sums)

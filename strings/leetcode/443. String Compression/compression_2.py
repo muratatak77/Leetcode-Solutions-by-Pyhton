@@ -17,7 +17,7 @@
 			bring to i j's position
 			and what is diff j-1 = 2
 			
-			we can change index+1 : 1  => chars[index] = chars[j] 
+			we can change index+1 >> 1  => chars[index] = chars[j] 
 			new array : a  , a , b ,b,  c ,  c ,  c 
 			and must be j-i > 1 everytime. because if we have just one char . like = [a] we can not add any element like  [a,1]
 
@@ -56,6 +56,7 @@ class Solution:
 		i = 0
 		while i < len(chars):
 			j = i
+			print(" j = i :" , j)
 			while j < len(chars) and chars[j] == chars[i]:
 				j += 1
 				print(" j : ", j)
@@ -73,6 +74,7 @@ class Solution:
 			index += 1
 			if (j-i>1):
 				for c in str(j-i):
+					print("			c : ", c)
 					chars[index] = c
 					index+=1
 					print("			chars : ", chars)

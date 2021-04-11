@@ -8,10 +8,17 @@ class Solution:
 		while p1 >= 0 or p2 >= 0:
 			
 			if p1 >= 0:
+				# The ord() function returns an integer representing the Unicode character.
+				# >>> ord('0') : 48
+				# >>> ord('1') : 49
+				# >>> ord('2') : 50
 				#Set x1 to be equal to a digit from string nums1 at index p1
 				x1 = ord(num1[p1]) - ord('0')
+				print("ord('0') : ", ord('0'))
+				print("ord(num1[p1]) : ", ord(num1[p1]))
 			else: 
 				x1 = 0
+
 			print("	x1 : ", x1)
 			if p2 >= 0:
 				x2 = ord(num2[p2]) - ord('0')
@@ -39,6 +46,10 @@ class Solution:
 
 num1 = '1789'
 num2 = '15'
+
+num1 = "11"
+num2 = "123"
+
 res = Solution().addStrings(num1,num2)
 print("res : ", res)
 
