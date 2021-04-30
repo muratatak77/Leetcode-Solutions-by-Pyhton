@@ -1,4 +1,4 @@
-#mutable version - we will use char array instead of string. 
+ #mutable version - we will use char array instead of string. 
 
 def overall(s):
 	result = []

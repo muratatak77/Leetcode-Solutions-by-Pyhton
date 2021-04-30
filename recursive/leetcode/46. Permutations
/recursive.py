@@ -10,19 +10,19 @@ def overall(s):
 			print("===========================")
 			return
 		else:
-			print("before i       : ", i)			
+			print("	before i : ", i)			
 			for pick in range(i,len(s)):
 
-				print("inside i         : ", i , "     , pick :", pick)
+				print("		inside i         : ", i , "     , pick :", pick)
 				s[pick],s[i] = s[i],s[pick]
-				print("1 - swap s :" , s)
+				print("		1 - swap s :" , s)
 				slate.append(s[i])
-				print("before helper  :  i : ", i , ", slate : ", slate )
+				print("		before helper  :  i : ", i , ", slate : ", slate )
 				helper(s,i+1,slate)
 				slate.pop()
-				print("slate pop :" , slate, "  - i : ", i, " -  s : ", s)
+				print("		slate pop :" , slate, "  - i : ", i, " -  s : ", s, " - pick : ", pick)
 				s[pick],s[i] = s[i],s[pick]
-				print("2 - swap s :" , s, " - slate : ", slate)
+				print("		2 - swap s :" , s, " - slate : ", slate, " - pick : ", pick)
 				print("--------------")
 
 

@@ -1,21 +1,22 @@
 def overall(s):
 	result = []
-	def helper(s, i):
-		#base case: leaf workers
-		if  i == len(s):
-			print("s : ", s)
-			result.append(''.join(s)) #mutable version, fresh string creating out of original slate, O(n) 
-		else:
+	
+	def helper(s,i):
+		#leaf workers
+		if i == len(s):
+			result.append(''.join(s))
+		else: 
+			#internal node workers
 			if s[i].isdigit():
-				helper(s, i+1)
+				helper(s,i+1)
 			else:
-				s[i] = s[i].upper()
-				helper(s, i+1)
-
 				s[i] = s[i].lower()
 				helper(s, i+1)
 
-	helper(list(s), 0)
+				s[i] = s[i].upper()				
+				helper(s, i+1)
+
+	helper(list(s),0)
 	return result
 
 s = "a1b2"

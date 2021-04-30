@@ -43,5 +43,5 @@ def overall(nums):
 
 nums = [2,2]
 
-# nums = [4,4,4,1,4]
+nums = [4,4,4,1,4]
 print(overall(nums))

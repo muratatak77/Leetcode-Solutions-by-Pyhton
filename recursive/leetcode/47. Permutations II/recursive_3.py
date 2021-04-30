@@ -1,32 +1,33 @@
 # we can apply sub definition and partial solution tree solution
 # we need to a set to avoid repeating
 
-
-def overall(nums):
-	
+def overall(s):
 	result = []
 	hset = set()
-	n = len(nums)
+	n = len(s)
 
 	def helper(s,i,slate):
+		#base case, leaf node
 		if i == n:
 			result.append(slate[:])
-			return 
+			return
 		else:
-			for pick in range(i,n):
+
+			for pick in range(i, n):
 
 				if str(slate[:]) in hset:
 					continue
 
-				s[pick], s[i] = s[i], s[pick]
+				s[pick],s[i] = s[i], s[pick]
 				slate.append(s[i])
-				helper(s,i+1,slate)
-				s[pick], s[i] = s[i], s[pick]
-				hset.add(str(slate[:]))
+				helper(s, i+1, slate)
+				s[pick],s[i] = s[i], s[pick]
+				hset.add(slate[:])
 				slate.pop()
 
-	helper(nums,0,[])
+	helper(s,0,[])
 	return result
+
 
 
 nums = [1,1,2]

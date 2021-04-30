@@ -23,9 +23,9 @@ def overall(s):
 	def helper(s,i,slate):
 		print("start helper i :", i , " - slate : ", slate)
 		#backtracing case
-		if len(slate) > 0 and not ispalindrome(slate[-1]):
-			print("   is not palindrom : ", slate[-1])
-			return 
+		# if len(slate) > 0 and not ispalindrome(slate[-1]):
+			# print("   is not palindrom : ", slate[-1])
+			# return 
 
 		#base case
 		if i == len(s):
@@ -38,18 +38,28 @@ def overall(s):
 			#append s[i..pick]
 			print("recursice case - i :" , i, " - pick :", pick)
 			print("slate append : ", s[i:pick+1])
-			slate.append(s[i:pick+1])
-
-			print("  call helper : slate : ", slate, " i : ", i)
-			helper(s,pick+1,slate)
-			print("     slate pop     ")
-			slate.pop()
-			print("     after pop slate :  ", slate)
+			if ispalindrome(s[i:pick+1]):
+				slate.append(s[i:pick+1])
+				print("  call helper : slate : ", slate, " i : ", i)
+				helper(s,pick+1,slate)
+				print("     slate pop     ")
+				slate.pop()
+				print("     after pop slate :  ", slate)
 
 	helper(s,0,[])
 	return result
 
 
-s = "aa"
+s = "aab"
 res = overall(s)
 print("res : ", res)
+
+
+'''
+	T(N)  = O(2^N. N )   N is the length of string, this is worst case time complexity when all the possible substring are palindrome
+
+	N = 3 Total nodes =will be 8. 2^N
+
+	S(N) = O(N)
+
+'''

@@ -1,0 +1,8 @@
+color_schemes:
+  SCHEME_NAME:
+    EVENT_NAME:
+      name: COLOR_NAME
+      intensity: BOOLEAN
+      bold: BOOLEAN
+      italic: BOOLEAN
+      underline: BOOLEAN

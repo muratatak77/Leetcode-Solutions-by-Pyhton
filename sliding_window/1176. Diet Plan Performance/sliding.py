@@ -14,33 +14,35 @@
 '''
 from typing import List
 class Solution:
-    def dietPlanPerformance(self, calories: List[int], k: int, lower: int, upper: int) -> int:
+	def dietPlanPerformance(self, calories: List[int], k: int, lower: int, upper: int) -> int:
 
-    	#check null cases
-    	if not calories:
-    		return 0
+		#check null cases
+		if not calories:
+			return 0
 
-    	n = len(calories)
-    	if n == 0:
-    		return 0
-    	#initial computation
-    	wsum = sum(calories[:k])
-    	points = 0
-    	if wsum < lower:
-    		points -= 1
-    	elif wsum > upper:
-    		points += 1
-    		
-    	#remain items computation
-    	for i in range(k,n):
-    		wsum += calories[i] - calories[i-k]
-    		if wsum < lower:
-    			points -= 1
-    		elif wsum > upper:
-    			points += 1
+		n = len(calories)
+		if n == 0:
+			return 0
+		#initial computation
+		wsum = sum(calories[:k])
+		points = 0
+		if wsum < lower:
+			points -= 1
+		elif wsum > upper:
+			points += 1
+			
+		print("wsum : ", wsum)
+		
+		#remain items computation
+		for i in range(k,n):
+			wsum += calories[i] - calories[i-k]
+			if wsum < lower:
+				points -= 1
+			elif wsum > upper:
+				points += 1
 
 
-    	return points
+		return points
 
 calories = [1,2,3,4,5]
 k = 1
@@ -48,10 +50,10 @@ lower = 3
 upper = 3
 
 
-calories = [3,2]
-k = 2
-lower = 0
-upper = 1
+# calories = [3,2]
+# k = 2
+# lower = 0
+# upper = 1
 
 res = Solution().dietPlanPerformance(calories, k, lower, upper)
 print("res : ", res)

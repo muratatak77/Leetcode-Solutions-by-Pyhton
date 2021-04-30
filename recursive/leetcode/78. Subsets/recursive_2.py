@@ -23,16 +23,21 @@ def overall(nums):
 		# base case , leaf workers 
 		if i == len(s):
 			result.append(slate[:]) # copy / clone add
+			print("			Added to the result. slate :", slate)
 		else:
 
 			#recurvise case , internal nodes
 			# exclude side 
+			print("	Calling helper exclude : ", slate, " - i :", i+1)
 			helper(s, i+1, slate)
 
 			#include case
 			slate.append(s[i])
+			print("	Calling helper include : ", slate, " - i :", i+1)
 			helper(s, i+1, slate)
+
 			slate.pop()
+			print("Slate pop : ", slate)
 
 	helper(nums,0,[])
 	return result

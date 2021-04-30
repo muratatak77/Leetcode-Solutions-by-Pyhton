@@ -6,12 +6,12 @@ def overall(candidates, target):
 	candidates.sort()
 	print(candidates)
 
-	def helper(s,i,target,slate):
+	def helper(s,i,slate):
 		#base case : leaf workers
 		
-		if  s[i] == target:
-				result.append(slate[:])
-				return
+		if s[i] == target:
+			result.append(slate[:])
+			return
 
 		if i == n:
 			return
@@ -20,7 +20,7 @@ def overall(candidates, target):
 		
 			#recursive case : internal workers
 			#exclude case
-			helper(s,i+1,target,slate)
+			helper(s,i+1,slate)
 
 			#include case
 			slate.append(s[i])

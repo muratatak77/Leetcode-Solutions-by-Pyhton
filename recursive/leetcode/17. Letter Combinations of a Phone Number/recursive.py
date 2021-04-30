@@ -18,6 +18,7 @@ def overall(digits):
                  '9': ['w', 'x', 'y', 'z']}
 
 	def helper(digits,i,slate):
+		# print(" i : ", i , " - slate : ", slate)
 		#base case, leaf nodes
 		if i == len(digits):
 			if len(slate)>0:
@@ -27,6 +28,7 @@ def overall(digits):
 		#recursive case, leaf nodes
 		else:
 			for letter in hmap[digits[i]]:
+				print(" 	letter: ", letter , " - i : ", i)
 				slate.append(letter)
 				helper(digits,i+1,slate)
 				slate.pop()
