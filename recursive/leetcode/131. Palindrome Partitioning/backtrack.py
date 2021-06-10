@@ -45,6 +45,7 @@ def overall(s):
 				print("     slate pop     ")
 				slate.pop()
 				print("     after pop slate :  ", slate)
+			print("-------------------------------")
 
 	helper(s,0,[])
 	return result

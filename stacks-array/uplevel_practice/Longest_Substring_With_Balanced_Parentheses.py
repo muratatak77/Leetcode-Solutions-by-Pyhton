@@ -36,7 +36,7 @@ def find_max_length_of_matching_parentheses(brackets):
                 index_follow = i
     return max_elem
 
-brackets = "((((())(((()"
-# brackets = "()()()"
-brackets = "()((()))()((()))"
+# brackets = "((((())(((()"
+brackets = "(()()())"
+# brackets = "()((()))()((()))"
 print(find_max_length_of_matching_parentheses(brackets))

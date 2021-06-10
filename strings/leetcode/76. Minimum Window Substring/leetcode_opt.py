@@ -26,6 +26,9 @@ def minWindow(s, t):
 
 	ans = float("inf"), None, None
 
+	print("dict_t : ", dict_t)
+	print("required : ", required)
+
 	# Look for the characters only in the filtered list instead of entire s. This helps to reduce our search.
 	# Hence, we follow the sliding window approach on as small list.
 	while r < len(filtered_s):

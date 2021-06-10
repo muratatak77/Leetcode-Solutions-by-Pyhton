@@ -36,7 +36,7 @@ def minWindow(s, t):
 		#if frequency of the current character added equals to the desired count in t then increment the formet count by 1
 		if character in dict_t and window_counts[character] == dict_t[character]:
 			formed += 1
-			print("formed increment : ", formed)
+			print("			formed increment : ", formed)
 
 
 		while l <= r and formed == required:
@@ -46,7 +46,7 @@ def minWindow(s, t):
 			#save the smallest window
 			if r-l+1 < ans[0]:
 				ans = (r-l+1,l,r)
-				print("ANS : ", ans)
+				print("				ANS : ", ans)
 
 			window_counts[character] -= 1 #no longer part of the window 
 			print("window_counts[character] - 1 : ", window_counts[character] ,  " - window_counts : ", window_counts)
@@ -59,16 +59,19 @@ def minWindow(s, t):
 
 		r += 1
 		print("----------------------------")
+	
+	print("				ANS final : ", ans)
 
 	if ans[0] == float("inf"):
 		return ""
 	else:
 		return s[ans[1]:ans[2]+1]
 
-S = "ADOBECODEBANC"
+# S = "ADOBECODEBANC"
+# 
+S = "ahffaksfajeeubsne"
+T = "jefaa"
 
-S = "AEBANC"
-T = "AB"
 res = minWindow(S,T)
 print("RES : ", res)
 

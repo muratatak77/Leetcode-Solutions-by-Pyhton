@@ -1,8 +1,9 @@
 require 'net/http'
 
 # THIS FILE SHOULD NOT BE CHANGED AND SHOULD BE USED 'AS IS'
-class Client
-  URL = 'https://flakey-api.crowdai.com/employees'
+class Client2
+  # URL = 'https://flakey-api.crowdai.com/employees'
+  URL = 'https://jsonplaceholder.typicode.com/posts'
 
   attr_reader :token
 
@@ -20,9 +21,18 @@ class Client
   #   raise "Failed to connect to server: #{e.message}"
   # end
 
-  def run 
-    file_name = "data_#{rand(0..2)}.json"
-    puts "WE ARE READING #{file_name}"
-    return File.read(file_name)
+  def run
+    begin
+      uri = URI("#{URL}?token=#{@token}")
+      Net::HTTP.get(uri)  
+    rescue StandartError => e
+      raise "Failed to connect to server : #{e.message}"
+    end
   end
+
+  # def run 
+  #   file_name = "data_#{rand(0..2)}.json"
+  #   puts "WE ARE READING #{file_name}"
+  #   return File.read(file_name)
+  # end
 end
